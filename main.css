@@ -1,0 +1,130 @@
+:root {
+    /*  Primary */
+    --Pale-blue: hsl(225, 100%, 94%);
+    --Bright-blue: hsl(245, 75%, 52%);
+    /* Neutral */
+    --Very-pale-blue: hsl(225, 100%, 98%);
+    --Desaturated-blue: hsl(224, 23%, 55%);
+    --Dark-blue: hsl(223, 47%, 23%);
+}
+
+body {
+    margin: 0;
+    font-family: 'Red Hat Display', sans-serif;
+}
+p {
+    font-size: 16px;
+    color: var( --Desaturated-blue);
+}
+
+h1 {
+    color: var(--Dark-blue);
+    font-weight: 900;
+    margin: 0;
+    font-size: 28px;
+}
+button {
+    width: 100%;
+    height: 50px;
+    border: none;
+    background-color: var(--Bright-blue);
+    margin-top: 30px;
+    border-radius: 15px;
+    color:hsl(255deg 76.92% 94.9%);
+    font-size: 15px;
+    font-weight: 500;
+    box-shadow:  2px 9px 26px 5px var(--Desaturated-blue);
+    cursor: pointer;
+}
+button:hover {
+    background-color: hsl(244.51deg 82.61% 68.43%);
+}
+a:not(.Cancel){
+    color:var(--Bright-blue);
+    cursor: pointer;
+}
+
+a:focus {
+    outline: none;
+}
+a:hover {
+    text-decoration: none;
+    color:hsl(244.51deg 82.61% 68.43%);
+}
+.page {
+    min-height:100vh;
+    background-image: url(pattern-background-desktop.svg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-color:var(--Pale-blue);
+    padding-top: 60px;
+    
+}
+@media (max-width:767px){
+    .page {
+        background-image: url(pattern-background-mobile.svg);
+        padding: 50px 25px;
+    }
+}
+
+.page .card {
+    width: 450px;
+    margin: 0 auto;
+    background-color:var(--Very-pale-blue);
+    border-radius: 20px;
+    overflow: hidden;
+    text-align: center;
+    box-shadow: 2px 2px 15px 0px var(--Desaturated-blue);
+}
+@media (max-width:767px){
+    .page .card {
+        width: 100%;
+    }
+}
+.page .card .intro {
+    padding: 40px 35px;
+}
+.page .card .intro .text {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+.page .card .audio {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: hsl(225deg 100% 94% / 38%);
+    padding: 20px;
+    border-radius: 10px;
+}
+.page .img-box img {
+    max-width: 100%;
+}
+.page .card .audio .price {
+    display: flex;
+    align-items: center;
+}
+.page .card .audio .price img {
+    margin-right: 20px;
+}
+.page .card .audio .price h3{
+    margin: 0;
+}
+.page .card .audio .price p{
+    margin: 5px 0 0;
+}
+.attribution { 
+    font-size: 11px; 
+    text-align: center; 
+    margin-top: 30px;
+}
+.attribution a { 
+    color: hsl(228, 45%, 44%);
+}
+.page .Cancel {
+    font-size: 16px;
+    color: var( --Desaturated-blue);
+    margin-top: 30px;
+    display: block;
+    cursor: pointer;
+    text-decoration: none;
+}
